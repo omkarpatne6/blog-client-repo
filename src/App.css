@@ -1,0 +1,208 @@
+body {
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: #fff;
+  height: 100%
+}
+
+html {
+  height: 100%
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #1b8b00;
+  background-image: linear-gradient(314deg, #23c000 0%, #88ff00 74%);
+  border-radius: 1.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: linear-gradient(transparent, #23c000);*/
+  background-color: #1b8b00;
+  background-image: linear-gradient(314deg, #198a00 0%, #75d803 74%);
+}
+
+/* Header */
+.header {
+  background-color: transparent;
+}
+
+.header .logo {
+  margin: auto auto auto 10px;
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.header .logo:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+
+#top {
+  position: absolute;
+  top: 0%;
+  left: 50%
+}
+
+.top-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  background: #030303;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 50;
+}
+
+.top-layer.active {
+  top: 0%
+}
+
+.top-layer-2 {
+  background-color: #1b8b00;
+  background-image: linear-gradient(314deg, #23c000 0%, #88ff00 74%);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0.25s;
+}
+
+.last-layer-3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  z-index: 60;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  background: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0.45s;
+}
+
+.last-layer-3 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.last-layer-3 ul li a {
+  padding: 15px 40px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.last-layer-3 ul li {
+  padding: 15px 0px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+}
+
+.last-layer-3 ul li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #1b8b00;
+  background-image: linear-gradient(314deg, #23c000 0%, #88ff00 74%);
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.5s cubic-bezier(0.8, 0.05, 0.355, 1);
+  z-index: -1;
+}
+
+.last-layer-3 ul li:hover::before {
+  transform: scaleX(1);
+}
+
+
+.buttons button {
+  border: none;
+  background: rgba(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 50px;
+  height: 50px;
+  font-size: 21px;
+
+}
+
+.buttons button:hover {
+  background: rgba(255, 255, 255);
+  transform: scale(1.1)
+}
+
+
+.form-control {
+  border-radius: 2px;
+  border: none;
+}
+
+.deleteBtn {
+  color: red;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.deleteBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 20px;
+} 
+
+.editBtn {
+  color: red;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+
+.editBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: 20px;
+} 
+
+.ql-container,
+.ql-toolbar {
+  border: none !important;
+  outline: none !important;
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+  box-shadow: none !important;
+  height: 250px;
+}
